@@ -1,0 +1,32 @@
+<h1 class="center">Welcome Friends To Our App!</h1>
+
+<div class="center">
+<%= link_to "Our Users", users_index_path, class: 'button' %>
+<button class="users-display"><h5> All users </h5></button>
+<br>
+<button class="users-create"><h5> New user </h5></button>
+<hr>
+</div>
+
+<div class='welcome'>
+  <%= image_tag 'Welcomes.jpg' %>
+</div>
+
+<h2 class="center">Users</h2>
+<hr />
+<div class="row">
+  <div class="col s12 m6">
+    <ul>
+      <% @users.each do |user| %>
+        <li>
+          <%= user["first_name"] %> - <%= user["last_name"] %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="row" id="character-list">
+    <h3 id="user">All the Users</h2>
+    <ul id="characters">
+    </ul>
+  </div>
+</div>
